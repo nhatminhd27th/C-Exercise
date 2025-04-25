@@ -23,7 +23,7 @@ int main(void)
     char q_column = 0;  /* Queen column */
     char p_column = 0;  /* Piece column */
     unsigned short q_row = 0;   /* Queen row*/
-    unsigned short m_row = 0;   /* Piece row*/
+    unsigned short p_row = 0;   /* Piece row*/
 
     printf("Enter the position of the Queen: ");
     scanf(" %c%hu", &q_column, &q_row);
@@ -31,12 +31,12 @@ int main(void)
     if(VALID_POSITION(q_column, q_row))
     {
         printf("Enter the position of the next move: ");
-        scanf(" %c%hu", &p_column, &m_row);
-        if(VALID_POSITION(p_column, m_row))
+        scanf(" %c%hu", &p_column, &p_row);
+        if(VALID_POSITION(p_column, p_row))
         {
             /* First condition compare the differences of rows and columns, the next two condition compare rows and columns*/
-            if( (m_row - q_row)*(m_row - q_row) == (p_column - q_column)*(p_column - q_column)
-                || m_row == q_row
+            if( (p_row - q_row)*(p_row - q_row) == (p_column - q_column)*(p_column - q_column)
+                || p_row == q_row
                 || p_column == q_column
             ){
                 printf("Warning!");
