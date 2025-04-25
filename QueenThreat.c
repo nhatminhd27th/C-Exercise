@@ -2,6 +2,13 @@
 Write a C program that takes the position of a queen on a chessboard as input,
 then takes the position of another square (a potential move or target).
 The program should output whether the queen can capture a piece on that square based on the rules of chess.
+
+Solution:
+
+The Queen will capture any piece that is on the same line or diagonal as her.
+If a piece is on the same line as the Queen, it means they share the same row or the same column.
+If a piece is on a diagonal, the difference between its row and the Queen's row is equal to the difference between its column
+and the Queen's column.
 */
 
 #include "stdio.h"
